@@ -95,10 +95,11 @@ FROM customer;
 ```sql
 USE sakila;
 SELECT 
-  CONCAT(UPPER(LEFT(SUBSTRING_INDEX(email, '@', 1), 1)), LOWER(SUBSTRING_INDEX(email, '@', 1))) AS email_username,
-  CONCAT(UPPER(LEFT(SUBSTRING_INDEX(email, '@', -1), 1)), LOWER(SUBSTRING_INDEX(email, '@', -1))) AS email_domain
+  CONCAT(UPPER(LEFT(SUBSTRING_INDEX(email, '@', 1), 1)), LOWER(SUBSTRING(SUBSTRING_INDEX(email, '@', 1), 2))) AS email_username,
+  CONCAT(UPPER(LEFT(SUBSTRING_INDEX(email, '@', -1), 1)), LOWER(SUBSTRING(SUBSTRING_INDEX(email, '@', -1), 2))) AS email_domain
 FROM customer;
 ```
-![image](https://github.com/killakazzak/12-03-sdb-hw/assets/32342205/087cc0e9-ea91-43e2-b339-e856f2368763)
+![image](https://github.com/killakazzak/12-03-sdb-hw/assets/32342205/e831341d-46eb-440b-baeb-84960cbd0bb9)
+
 
 
