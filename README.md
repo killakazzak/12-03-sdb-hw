@@ -91,5 +91,13 @@ FROM customer;
 
 ### Решение Задание 6*
 
+```sql
+USE sakila;
+SELECT 
+  CONCAT(UPPER(LEFT(SUBSTRING_INDEX(email, '@', 1), 1)), LOWER(SUBSTRING_INDEX(email, '@', 1))) AS email_username,
+  CONCAT(UPPER(LEFT(SUBSTRING_INDEX(email, '@', -1), 1)), LOWER(SUBSTRING_INDEX(email, '@', -1))) AS email_domain
+FROM customer;
+```
+![image](https://github.com/killakazzak/12-03-sdb-hw/assets/32342205/087cc0e9-ea91-43e2-b339-e856f2368763)
 
 
