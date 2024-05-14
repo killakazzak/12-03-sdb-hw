@@ -36,6 +36,12 @@ SELECT * FROM payment WHERE payment_date >= '2005-06-15' AND payment_date <= '20
 
 ### Решение Задание 3
 
+```sql
+USE sakila;
+SELECT * FROM rental ORDER BY rental_id desc LIMIT 5;
+```
+![image](https://github.com/killakazzak/12-03-sdb-hw/assets/32342205/961eb6ff-9d76-42a6-84ec-6e303fef5cd9)
+
 
 
 ### Задание 4
