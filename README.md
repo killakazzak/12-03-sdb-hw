@@ -55,6 +55,7 @@ SELECT * FROM rental ORDER BY rental_id desc LIMIT 5;
 ### Решение Задание 4
 
 ```sql
+USE sakila;
 SELECT 
   REPLACE(LOWER(first_name), 'll', 'pp') AS first_name,
   REPLACE(LOWER(last_name), 'll', 'pp') AS last_name
