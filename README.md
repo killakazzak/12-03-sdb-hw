@@ -54,6 +54,18 @@ SELECT * FROM rental ORDER BY rental_id desc LIMIT 5;
 
 ### Решение Задание 4
 
+```sql
+SELECT 
+  REPLACE(LOWER(first_name), 'll', 'pp') AS first_name,
+  REPLACE(LOWER(last_name), 'll', 'pp') AS last_name
+FROM customer
+WHERE active = 1
+  AND (first_name = 'Kelly' OR first_name = 'Willie');
+```
+![image](https://github.com/killakazzak/12-03-sdb-hw/assets/32342205/2dbd58f3-94a2-46f3-a8f8-0e7ed458e347)
+
+
+
 ## Дополнительные задания (со звёздочкой*)
 Эти задания дополнительные, то есть не обязательные к выполнению, и никак не повлияют на получение вами зачёта по этому домашнему заданию. Вы можете их выполнить, если хотите глубже шире разобраться в материале.
 
